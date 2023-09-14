@@ -1,0 +1,285 @@
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgb(10, 10, 20), rgb(30, 30, 40));
+    height: 100vh;
+    width: 100vw;
+
+    font-family: "Overpass", sans-serif;
+    color: white;
+
+    overflow: hidden;
+}
+
+::-webkit-scrollbar 
+{
+    width: 8px;
+}
+
+::-webkit-scrollbar-track 
+{
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb 
+{
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    transition: 0.2s all ease-in;
+}
+
+::-webkit-scrollbar-thumb:hover 
+{
+    background: rgba(255, 255, 255, 1);
+}
+
+.main-container
+{
+    position: relative;
+    transform: translateY(-10px);
+    height: 90vh;
+    width: 90vw;
+    max-width: 1000px;
+    background: #303040;
+    border: 1px solid #606060;
+    border-radius: 8px;
+
+    overflow: hidden;
+    padding: 10px;
+
+    display: flex;
+    gap: 10px;
+
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+}
+
+.contacts-panel
+{
+    height: auto;
+    width: 60%;
+    max-width: 300px;
+    min-width: 200px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #404050;
+    border-radius: 6px;
+    padding: 4px;
+    padding-top: 8px;
+}
+.contacts-panel h2
+{
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    margin: 5px;
+}
+
+.chatscreen-panel
+{
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    border: 1px solid #606060;
+    border-radius: 6px;
+    padding: 4px;
+
+    background-image: url('resources/chatground.jpg');
+    background-size: 256px;
+}
+
+.chatbox
+{
+    position: relative;
+    width: auto;
+    height: 50px;
+    background: rgba(222, 184, 135, 0.25);
+
+    border: 2px solid white;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    margin-bottom: 20px;
+
+    transition: 0.2s all ease-in;
+}
+.chatbox button
+{
+    width: 40px;
+    height: 40px;
+
+    background: none;
+
+    padding: 0;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+
+    margin: 8px;
+
+    opacity: 0.8;
+    transform: scale(0.9);
+    transition: 0.2s all ease-in;
+}
+.chatbox button:hover
+{
+    opacity: 1;
+    transform: scale(1);
+}
+.chatbox img
+{
+    width: 40px;
+    height: 40px;
+}
+.chatbox input
+{
+    flex-grow: 100;
+    height: 32px;
+    padding: 4px;
+    margin-left: 8px;
+
+    border: none;
+    background: none;
+
+    font-family: Overpass;
+    font-size: 18px;
+    color: white;
+
+    outline: none;
+}
+.chatbox input::placeholder
+{
+    color: white;
+    opacity: 0.75;
+    font-size: 16px;
+}
+
+.contact
+{
+    width: 100%;
+    height: 50px;
+
+    background: none;
+    border: 1px solid #707090;
+    border-radius: 6px;
+
+    transform: scale(0.9);
+    transition: 0.2s all ease-in;
+
+    align-items: center;
+    justify-content: center;
+
+    display: flex;
+}
+.contact img
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+.contact span
+{
+    width: 100%;
+    height: 40px;
+    line-height: 42px;
+
+    margin-left: 6px;
+    margin-right: 6px;
+
+    padding-left: 4px;
+    padding-right: 4px;
+
+    color: white;
+    font-family: "Overpass", sans-serif;
+
+    font-weight: 500;
+    font-size: 20px;
+
+    text-align: left;
+}
+.contact:hover
+{
+    background: #505060;
+    transform: scale(0.95);
+}
+
+.message-panel
+{
+    height: auto;
+    width: auto;
+
+    border-radius: 8px;
+
+    overflow-y: auto;
+    background: none;
+}
+.messagebox-me
+{
+    position: relative;
+    width: max-content;
+    height: max-content;
+    min-height: 30px;
+    background: rgba(224, 184, 134, 0.5);
+
+    border-radius: 8px;
+
+    margin-top: 14px;
+    margin-bottom: 8px;
+    margin-right: 4px;
+
+    display: flex;
+
+    padding-top: 12px;
+    padding-bottom: 8px;
+}
+.messagebox-you
+{
+    position: relative;
+    width: max-content;
+    height: max-content;
+    min-height: 30px;
+    background: rgba(173, 184, 224, 0.5);
+
+    border-radius: 8px;
+
+    margin-top: 14px;
+    margin-bottom: 8px;
+    margin-right: 4px;
+
+    display: flex;
+
+    padding-top: 12px;
+    padding-bottom: 4px;
+}
+.message-header
+{
+    width: min-content;
+    text-wrap: nowrap;
+    color: white;
+    position: absolute;
+    background:rgb(72, 50, 63);
+    transform: translateY(-26px);
+    padding: 2px 8px 0px 8px;
+    border-radius: 6px;
+}
+.message
+{
+    padding-left: 8px;
+    padding-right: 8px;
+
+    text-wrap: wrap;
+}
